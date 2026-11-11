@@ -1,0 +1,16 @@
+name: AntiCheatAI
+version: 1.0.0
+main: ru.depervs.anticheatai.AntiCheatAI
+api-version: '1.21'
+author: Depervs
+description: Real-time gameplay telemetry, adaptive anomaly detection and per-viewer ESP masking.
+commands:
+  ac:
+    description: AntiCheatAI control command
+    usage: /ac <train|watch|status|report|alerts|reset|reload>
+    permission: anticheatai.admin
+permissions:
+  anticheatai.admin:
+    default: op
+  anticheatai.bypass:
+    default: op

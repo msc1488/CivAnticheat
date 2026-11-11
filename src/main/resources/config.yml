@@ -1,0 +1,38 @@
+# AntiCheatAI 1.0.0
+training:
+  sample-interval-ticks: 2
+  save-every-seconds: 10
+  max-memory-samples: 20000
+
+detection:
+  enabled: true
+  decay-per-second: 0.15
+  alert-threshold: 8.0
+  kick-threshold: 35.0
+  kick-delay-seconds: 3
+  max-reach: 3.15
+  max-cps-window-ms: 1000
+  max-cps: 18
+  snap-yaw-deg: 75.0
+  snap-pitch-deg: 55.0
+  esp-wall-look-deg: 10.0
+  esp-required-events: 6
+
+visual-mask:
+  enabled: true
+  score-threshold: 22.0
+  max-distance: 64.0
+  check-points: true
+  update-ticks: 2
+
+alerts:
+  enabled: true
+  actionbar: true
+  console: true
+
+# AI here is an adaptive anomaly scorer: it learns the player's baseline
+# from training sessions and compares live telemetry against it.
+ai:
+  enabled: true
+  baseline-min-samples: 200
+  z-score-threshold: 3.0
